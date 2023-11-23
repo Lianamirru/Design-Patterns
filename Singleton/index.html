@@ -1,0 +1,22 @@
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script src="Settings.js"></script>
+  <script type="text/babel">
+    const settings1 = new Settings();
+    const settings2 = new Settings();
+
+    const element = (
+      <>
+        <h1>Singleton</h1>
+        <h2>Settings version: {settings1.get("version")}</h2>
+        <h2>Settings version: {settings2.get("version")}</h2>
+      </>
+    );
+
+    ReactDOM.render(element, document.getElementById("root"));
+  </script>
+</body>
+;
